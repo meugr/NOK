@@ -60,7 +60,10 @@ def nok (input_list):
 			i = i * (-1)
 			input_list_positive.append(i)
 	input_list_positive.sort(reverse=True)
-	answer = input_list_positive [0]
+	try:
+		answer = input_list_positive [0]
+	except:
+		answer = (' ...\nНа ноль делить нельзя, дурачок')
 	nod = 0
 	for i in range(0, len(input_list_positive)+1):
 		try:
@@ -75,4 +78,4 @@ def nok (input_list):
 
 print('''(´• ω •`)ﾉ\nПривет, я помогу тебе найти наименьшее общее кратное
 нескольких чисел\n===========================================\n''')
-print('Наименьшее общее кратное равно ', nok(create_list(choice_input_method())))
+print('наименьшее общее кратное равно ', nok(create_list(choice_input_method())))
