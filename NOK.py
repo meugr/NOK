@@ -3,7 +3,7 @@ def choice_input_method ():
 	choice = 0
 	while True:
 		try:
-			choice = int(input("Введи 1, если хочешь задать диапазон чисел, или 2 если список конкретных чисел: "))
+			choice = int(input("Введи 1, если хочешь задать диапазон чисел; или 2, если список конкретных чисел: "))
 			if choice == 1 or choice == 2:
 				break
 			else:
@@ -19,29 +19,29 @@ def create_list (choice):
 	if choice == 1:
 		while True:
 			try:
-				home = int(input("(•ิ_•ิ)? Введите начало диапазона: "))
-				end = int(input("(•ิ_•ิ)? Введите конец диапазона: "))
+				home = int(input("(•ิ_•ิ)? Введи начало диапазона: "))
+				end = int(input("(•ิ_•ิ)? Введи конец диапазона: "))
 				break
 			except:
-				print ("Введите натуральное число, никаких букв!", 'ლ(¯ロ¯"ლ)')
+				print ("Введи натуральное число, никаких букв, спецсимволов и дробей!", 'ლ(¯ロ¯"ლ)')
 		if home <= end:
 			input_list = [i for i in range(home, end + 1)]
 		elif home > end:
 			input_list = [i for i in range(end, home + 1)]
 	elif choice == 2:
-		print("Вводите числа, разделяя их клавишей Enter. По окончании ввода введите 0")
+		print("Вводи числа, разделяя их клавишей Enter. По окончании ввода введи 0")
 		while True:
 			try:
 				input_number = int(input())
 				if input_number != 0:
 					input_list.append(input_number)
-					print ("Вы уже ввели следующие числа:", end = " ")
+					print ("Ты уже ввел следующие числа:", end = " ")
 					for i in input_list:
 						print (i, end = " ")
 				else:
 					break
 			except:
-				print ("Введите натуральное число, никаких букв!", 'ლ(¯ロ¯"ლ)')
+				print ("Введи натуральное число, никаких букв, спецсимволов и дробей!", 'ლ(¯ロ¯"ლ)')
 	return input_list
 
 def nod_fun (a, b):
@@ -79,7 +79,6 @@ def nok (input_list):
 
 ############### ===MAIN=== ###############
 
-
 print('''(´• ω •`)ﾉ\nПривет, я помогу тебе найти наименьшее общее кратное
 нескольких чисел\n===========================================\n''')
-print('наименьшее общее кратное равно ', nok(create_list(choice_input_method())))
+print('Наименьшее общее кратное равно: ', nok(create_list(choice_input_method())))
