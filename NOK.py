@@ -61,6 +61,10 @@ def nok (input_list):
 			input_list_positive.append(i)
 	input_list_positive.sort(reverse=True)
 	try:
+		input_list_positive.remove(0)
+	except:
+		True
+	try:
 		answer = input_list_positive [0]
 	except:
 		answer = (' ...\nНа ноль делить нельзя, дурачок')
