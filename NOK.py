@@ -75,4 +75,4 @@ def nok (input_list):
 
 print('''(´• ω •`)ﾉ\nПривет, я помогу тебе найти наименьшее общее кратное
 нескольких чисел\n===========================================\n''')
-print(nok(create_list(choice_input_method())))
+print('Наименьшее общее кратное равно ', nok(create_list(choice_input_method())))
